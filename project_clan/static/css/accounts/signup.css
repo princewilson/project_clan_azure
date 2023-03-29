@@ -1,0 +1,24 @@
+body {
+    /* to get the gradient background */
+    background-image: linear-gradient(to right, rgb(24, 24, 130), rgb(237, 171, 50),  rgb(184, 24, 184));
+    /* to get all the text color to white */
+    color: white;
+    font-size: 16px;
+}
+
+main.container {
+    height: 75vh;
+}
+
+.buttonDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button a {
+    background-color: #0077B5;
+}

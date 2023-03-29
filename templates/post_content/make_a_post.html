@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.3-dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/post_content/make_a_post.css' %}">
+    <title>Project CLAN | Dashboard</title>
+</head>
+
+<body>
+
+    <div class="header position-sticky top-0">
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(to right, rgb(24, 24, 130), rgb(237, 171, 50),  rgb(184, 24, 184))">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="{% static 'assets/alietLogo.png' %}" alt="Aliet Logo" width="30" height="30" class="d-inline-block align-text-top" />
+                    Project CLAN
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-link active" aria-current="page">Home</a>
+                        <a href="#" class="nav-link">My Network</a>
+                        <a href="#" class="nav-link">Messaging</a>
+                        <a href="./notifications.html" class="nav-link">Notifications</a>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              me!
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">View Profile</a></li>
+                              <li><a class="dropdown-item" href="{% url 'make_a_post' %}">Post Something</a></li>
+                              <li><a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a></li>                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main class="formSection">
+        <div class="container">
+            <form action="{% url 'make_a_post' %}" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+
+                <input type="hidden" name="user_id" value="{{ user.id }}">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Post Description</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" id="formFile" name="image">
+                </div>
+                
+                <div class="button">
+                    <button type="submit" class="btn btn-primary mb-3">Make Post</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="m-5 fs-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-start">Reach Out</div>
+                <div class="col-sm-6 d-flex justify-content-end">
+                    <div><a href="https://www.instagram.com/yourcoolprinceofficial"><img src="{% static 'assets/instagram.svg' %}" alt="instagramLogo" class="mediaLogo me-2"/></a></div>
+                    <div><a href="https://www.linkedin.com/in/yourcoolprince/"><img src="{% static 'assets/linkedin.svg' %}" alt="linkedInLogo" class="mediaLogo"/></a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'bootstrap-5.2.3-dist/js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>

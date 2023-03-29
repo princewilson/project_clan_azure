@@ -1,0 +1,31 @@
+body {
+    /* to get the gradient background */
+    background-image: linear-gradient(to right, rgb(24, 24, 130), rgb(237, 171, 50),  rgb(184, 24, 184));
+    /* to get all the text color to white */
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    z-index: 999;
+}
+
+.formSection {
+    width: 60vw;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.button {
+    width: fit-content;
+    margin: auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 93%;
+    margin: auto;
+}

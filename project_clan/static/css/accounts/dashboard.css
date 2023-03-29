@@ -1,0 +1,67 @@
+body {
+    /* to get the gradient background */
+    background-image: linear-gradient(to right, rgb(24, 24, 130), rgb(237, 171, 50),  rgb(184, 24, 184));
+    /* to get all the text color to white */
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    z-index: 999;
+}
+/* Side bar */
+
+.sidebarSection {
+    position: sticky;
+    top: 85px;
+    /* width: fit-content; */
+    z-index: 997;
+}
+
+.sidebarSection .card img {
+    width: 5rem;
+    padding-top: 5px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.list-num a {
+    text-decoration: none;
+}
+
+/* Posts */
+
+.postsSection {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 998;
+}
+
+.post {
+    width: 80%;
+    background-color: white;
+    color: black;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 10px
+}
+
+.post-profile-photo img{
+    width: 40px;
+    height: 40px;
+}
+
+.post-image {
+    width: 90%;
+    margin:auto;
+}
+
+.post-image img{
+    width: 100%;
+    height: 270px;
+}

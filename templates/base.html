@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './bootstrap-5.2.3-dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static './css/base.css' %}">
+    <title>Project CLAN | Home Page</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(to right, rgb(24, 24, 130), rgb(237, 171, 50),  rgb(184, 24, 184))">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="{% static './assets/alietLogo.png' %}" alt="Aliet Logo" width="30" height="30" class="d-inline-block align-text-top" />
+                    Project CLAN
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                    <div class="navbar-nav">
+                        <a href="home.html" class="nav-link active" aria-current="page">Home</a>
+                        <a href="{% url 'signup' %}" class="nav-link">Sign Up!</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% include 'messages.html' %}
+
+    <main class="container">
+        <section>
+            <div class="titleSection">
+                <div>
+                    <img src="{% static './assets/alietLogo.png' %}" alt="Aliet Logo" height="150" width="150" />
+                </div>
+                <div>
+                    <h1>Project CLAN.</h1>
+                </div>
+                <div>
+                    <h1>Connecting Loyolites to the ALIET Nexus</h1>
+                </div>
+                <div>
+                    <p style="width: 50%; margin:auto"><i style="font-size: 1.5rem;">A one stop platform for all the students of ALIET to connect, collaborate and contribute for the betterment of each other.</i></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cardsSection">
+            <div class="row mt-5 mb-5 text-center" style="color: black">
+                <div class="card col-sm-3 mx-auto">
+                    <img src="{% static './assets/undraw_follow_anyone.svg'%}" class="card-img-top" alt="Follow Anyone">
+                    <div class="card-body">
+                      <h4 class="card-title">Follow</h4>
+                      <p class="card-text">Get post recommendations based on the people you follow.</p>
+                    </div>
+                </div>
+                <div class="card col-sm-3 mx-auto">
+                    <img src="{% static './assets/undraw_message_anyone.svg' %}" class="card-img-top" alt="Message Anyone">
+                    <div class="card-body">
+                      <h4 class="card-title">Message</h4>
+                      <p class="card-text">Interact directly with anyone on the platform.</p>
+                    </div>
+                </div>
+                <div class="card col-sm-3 mx-auto">
+                    <img src="{% static './assets/undraw_post_anything.svg' %}" class="card-img-top" alt="Post Anything">
+                    <div class="card-body">
+                      <h4 class="card-title">Post</h4>
+                      <p class="card-text">Share your achievements, suggestions and knowledge to motivate your fellow college mates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quotesSection mx-auto" style="color: black;">
+            <div class="row text-center">
+                <div class="card col">
+                    <div class="card-header">
+                      Quote
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>Your network is your net worth.</p>
+                        <footer class="blockquote-footer">Tim Sanders</footer>
+                      </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="m-5 fs-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-start">Reach Out</div>
+                <div class="col-sm-6 d-flex justify-content-end">
+                    <div><a href="https://www.instagram.com/yourcoolprinceofficial"><img src="{% static './assets/instagram.svg' %}" alt="instagramLogo" class="mediaLogo me-2"/></a></div>
+                    <div><a href="https://www.linkedin.com/in/yourcoolprince/"><img src="{% static './assets/linkedin.svg' %}" alt="linkedInLogo" class="mediaLogo"/></a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static './bootstrap-5.2.3-dist/js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    /* to get the gradient background */
+    background-image: linear-gradient(to right, rgb(24, 24, 130), rgb(237, 171, 50),  rgb(184, 24, 184));
+    /* to get all the text color to white */
+    color: white;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+/* to get the headings in the center  */
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cardsSection .card {
+    cursor: pointer;
+}
+
+.cardsSection .card:hover {
+    transform: scale(0.98);
+    transition: transform 0.2s ease-in-out;
+}
+.cardsSection .card img {
+    width: 15rem;
+    height: 15rem;
+    padding: 15px;
+}
+
+.quotesSection {
+    width: 30rem;
+}
+
+/* to adjust the size of social media icons in the footer */
+.mediaLogo {
+    width: 1.5rem;
+    height: 1.5rem;
+}
